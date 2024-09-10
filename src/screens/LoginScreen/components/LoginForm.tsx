@@ -40,17 +40,15 @@ const LoginForm = () => {
             render={({ field: { onChange, value } }) => (
               <TextInput
                 style={styles.input}
-                placeholder="Enter your email"
+                placeholder="Phone number, username or email address"
                 autoCapitalize="none"
                 autoCorrect={false}
-                keyboardType="email-address"
                 value={value}
                 onChangeText={onChange}
               />
             )}
             name="email"
           />
-          {errors.email && <Text>{errors.email.message}</Text>}
         </View>
         <View style={styles.formItem}>
           <Controller
@@ -58,7 +56,7 @@ const LoginForm = () => {
             render={({ field: { onChange, value } }) => (
               <TextInput
                 style={styles.input}
-                placeholder="Enter your password"
+                placeholder="Password"
                 secureTextEntry={true}
                 autoCapitalize="none"
                 autoCorrect={false}
@@ -77,6 +75,7 @@ const LoginForm = () => {
         <TouchableOpacity
           style={styles.submitButton}
           onPress={handleSubmit(onLoginSubmit)}
+          disabled={Boolean(errors.email?.message || errors.password?.message)}
         >
           <Text style={styles.submitButtonText}>Log in</Text>
         </TouchableOpacity>
