@@ -33,6 +33,7 @@ export const styles = StyleSheet.create({
   },
   formContainer: {
     paddingHorizontal: 30,
+    paddingTop: 30
   },
   forgotPasswordText: {
     width: "100%",

@@ -27,10 +27,10 @@ const LoginForm = () => {
       <View style={styles.logoContainer}>
         <Image
           source={{
-            uri: "https://logos-world.net/wp-content/uploads/2020/04/Instagram-Logo-2010-2013.png",
+            uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png?20160616034027",
           }}
-          width={220}
-          height={120}
+          width={200}
+          height={60}
         />
       </View>
       <View style={styles.formContainer}>
