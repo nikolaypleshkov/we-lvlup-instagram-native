@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     width: "100%",
     height: "100%",
     justifyContent: "center",
-    backgroundColor: AppTheme.colors.systemBackground
+    backgroundColor: AppTheme.colors.systemBackground,
   },
   logoContainer: {
     width: "100%",
@@ -89,5 +89,23 @@ export const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "700",
     color: "#385185",
+  },
+  screenDivider: {
+    width: "100%",
+  },
+  signUpContainer: {
+    position: "absolute",
+    bottom: 1,
+    width: "100%",
+  },
+  signUpTextContainer: {
+    flexDirection: "row",
+    justifyContent: "center",
+    width: "100%",
+    paddingVertical: 10,
+    gap: 3,
+  },
+  signUpText: {
+    color: AppTheme.colors.main,
   },
 });
