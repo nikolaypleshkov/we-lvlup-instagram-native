@@ -77,7 +77,6 @@ export const styles = StyleSheet.create({
     justifyContent: "center",
     paddingVertical: 10,
     borderRadius: 25,
-    // borderWidth: 2,
     marginBottom: 10,
   },
   socialIcon: {

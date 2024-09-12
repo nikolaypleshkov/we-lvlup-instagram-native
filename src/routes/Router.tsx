@@ -3,6 +3,7 @@ import { AppStackParamList } from "../constants/types";
 import { SafeAreaView, StyleSheet } from "react-native";
 import LoginScreen from "../screens/LoginScreen";
 import { AppTheme } from "../constants/styles";
+import RegisterScreen from "../screens/RegisterScreen/RegisterScreen";
 
 const Stack = createNativeStackNavigator<AppStackParamList>();
 
@@ -11,8 +12,8 @@ const Router = () => {
     <SafeAreaView style={styles.safeAreaContainer}>
       <Stack.Navigator>
         <Stack.Screen
-          name="Login"
-          component={LoginScreen}
+          name="Register"
+          component={RegisterScreen}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

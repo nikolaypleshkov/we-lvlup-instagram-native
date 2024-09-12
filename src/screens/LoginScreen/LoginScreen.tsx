@@ -14,6 +14,15 @@ import LoginForm from "./components/LoginForm";
 const LoginScreen = () => {
   return (
     <View style={styles.container}>
+      <View style={styles.logoContainer}>
+        <Image
+          source={{
+            uri: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png?20160616034027",
+          }}
+          width={200}
+          height={60}
+        />
+      </View>
       <LoginForm />
       <View style={styles.dividerContainer}>
         <Divider />

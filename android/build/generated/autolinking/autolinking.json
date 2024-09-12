@@ -3,6 +3,26 @@
   "reactNativePath": "/Users/nikolaypleshkov/Documents/GitHub/we-lvlup-instagram-native/node_modules/react-native",
   "reactNativeVersion": "0.75",
   "dependencies": {
+    "react-native-vector-icons": {
+      "root": "/Users/nikolaypleshkov/Documents/GitHub/we-lvlup-instagram-native/node_modules/react-native-vector-icons",
+      "name": "react-native-vector-icons",
+      "platforms": {
+        "ios": null,
+        "android": {
+          "sourceDir": "/Users/nikolaypleshkov/Documents/GitHub/we-lvlup-instagram-native/node_modules/react-native-vector-icons/android",
+          "packageImportPath": "import com.oblador.vectoricons.VectorIconsPackage;",
+          "packageInstance": "new VectorIconsPackage()",
+          "buildTypes": [],
+          "libraryName": "RNVectorIconsSpec",
+          "componentDescriptors": [],
+          "cmakeListsPath": "/Users/nikolaypleshkov/Documents/GitHub/we-lvlup-instagram-native/node_modules/react-native-vector-icons/android/build/generated/source/codegen/jni/CMakeLists.txt",
+          "cxxModuleCMakeListsModuleName": null,
+          "cxxModuleCMakeListsPath": null,
+          "cxxModuleHeaderName": null,
+          "isPureCxxDependency": false
+        }
+      }
+    },
     "react-native-safe-area-context": {
       "root": "/Users/nikolaypleshkov/Documents/GitHub/we-lvlup-instagram-native/node_modules/react-native-safe-area-context",
       "name": "react-native-safe-area-context",
@@ -513,9 +533,9 @@
     "ios": {
       "sourceDir": "/Users/nikolaypleshkov/Documents/GitHub/we-lvlup-instagram-native/ios",
       "xcodeProject": {
-        "name": "InstagramNative.xcodeproj",
+        "name": "InstagramNative.xcworkspace",
         "path": ".",
-        "isWorkspace": false
+        "isWorkspace": true
       },
       "assets": []
     },
