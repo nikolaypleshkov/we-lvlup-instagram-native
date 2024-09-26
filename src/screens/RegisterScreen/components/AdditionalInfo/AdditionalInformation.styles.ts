@@ -49,8 +49,8 @@ export const styles = StyleSheet.create({
     color: "#fff",
   },
   cancelButtonText: {
-    textAlign: 'center',
+    textAlign: "center",
     color: AppTheme.colors.main,
-    marginTop: 10
-  }
+    marginTop: 10,
+  },
 });

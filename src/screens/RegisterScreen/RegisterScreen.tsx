@@ -4,6 +4,7 @@ import UsernameCreation from "./components/UsernameCreation";
 import PasswordCreation from "./components/PasswordCreation/PasswordCreation";
 import AdditionalInfo from "./components/AdditionalInfo";
 import { AdditionalData } from "../../constants/types";
+import AccountPreview from "./components/AccountPreview/AccountPreview";
 
 interface Step<T> {
   data: T;
@@ -14,6 +15,7 @@ export type RegistrationInformation = {
   username: Step<string | null>;
   password: Step<string | null>;
   additionalData: Step<AdditionalData>;
+  profileImage?: Step<string | null>;
 };
 
 const RegisterScreen = () => {
@@ -35,6 +37,16 @@ const RegisterScreen = () => {
         completed: false,
       },
     });
+  const [loading, setLoading] = React.useState(false);
+
+  const register = async () => {
+    setTimeout(() => {
+      console.log('collected data', dataCollection);
+      return Promise.resolve({
+        dataCollection,
+      });
+    }, 1000);
+  };
 
   const getCurrentStep = () => {
     if (!dataCollection.username.completed) {
@@ -46,7 +58,8 @@ const RegisterScreen = () => {
     if (!dataCollection.additionalData.completed) {
       return "additionalInformation";
     }
-    return "completed";
+   
+    return "preview";
   };
 
   const currentStep = getCurrentStep();
@@ -114,7 +127,11 @@ const RegisterScreen = () => {
         />
       )}
 
-      {currentStep === "completed" && <Text>Complete ;))</Text>}
+      {currentStep === 'preview' && (
+        <AccountPreview dataCollection={dataCollection} onEdit={function (step: string): void {
+          throw new Error("Function not implemented.");
+        } } onComplete={register} />
+      )}
     </View>
   );
 };
