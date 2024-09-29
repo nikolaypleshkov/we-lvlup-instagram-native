@@ -1,3 +1,4 @@
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 export type AppStackParamList = {
     Home: undefined;
@@ -5,6 +6,15 @@ export type AppStackParamList = {
     Register: undefined;
 }
 
+export type RegisterScreenNavigationProp = NativeStackNavigationProp<
+  AppStackParamList,
+  'Register'
+>;
+
+export type LoginScreenNavigationProp = NativeStackNavigationProp<
+  AppStackParamList,
+  'Login'
+>;
 
 export interface AdditionalData {
     emailOrPhone: string | null;

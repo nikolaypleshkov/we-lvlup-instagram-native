@@ -10,8 +10,18 @@ import {
 import { styles } from "./LoginScreen.styles";
 import Divider from "../../components/Divider";
 import LoginForm from "./components/LoginForm";
+import { LoginScreenNavigationProp } from "../../constants/types";
 
-const LoginScreen = () => {
+interface LoginScreenProps {
+  navigation: LoginScreenNavigationProp;
+}
+
+const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
+
+  const handleNavigation = () => {
+    navigation.navigate('Register');
+  }
+
   return (
     <View style={styles.container}>
       <View style={styles.logoContainer}>
@@ -44,7 +54,7 @@ const LoginScreen = () => {
         <Divider dividerStyle={styles.screenDivider} />
         <View style={styles.signUpTextContainer}>
           <Text>Don't have an account?</Text>
-          <TouchableOpacity>
+          <TouchableOpacity onPress={handleNavigation}>
             <Text style={styles.signUpText}>Sign up</Text>
           </TouchableOpacity>
         </View>

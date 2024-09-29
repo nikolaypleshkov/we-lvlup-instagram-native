@@ -4,6 +4,9 @@ import { styles } from "../LoginScreen.styles";
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./login.schema";
+import Toast from "../../../components/Toast";
+import { useAppDispatch } from "../../../app/hooks";
+import { showToast } from "../../../features/toast/toastSlice";
 
 const defaultValues = {
   email: "",
@@ -20,7 +23,22 @@ const LoginForm = () => {
     defaultValues,
   });
 
-  const onLoginSubmit = (formData: any): void => {};
+  const dispatch = useAppDispatch();
+
+  const triggerToast = (
+    type: "success" | "error" | "warning" | "info",
+    message: string
+  ) => {
+    dispatch(
+      showToast({ type: type, message: message })
+    );
+  };
+
+  const onLoginSubmit = (formData: any): void => {
+    dispatch(
+      showToast({ type: "success", message: "Post uploaded successfully!" })
+    );
+  };
 
   return (
     <>
@@ -65,8 +83,8 @@ const LoginForm = () => {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.submitButton}
-          onPress={handleSubmit(onLoginSubmit)}
-          disabled={Boolean(errors.email?.message || errors.password?.message)}
+          onPress={() => triggerToast("success", "Login successfully!")}
+          // disabled={Boolean(errors.email?.message || errors.password?.message)}
         >
           <Text style={styles.submitButtonText}>Log in</Text>
         </TouchableOpacity>

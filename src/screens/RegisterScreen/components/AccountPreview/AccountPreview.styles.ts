@@ -89,4 +89,9 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     textAlign: "center",
   },
+  cancelButtonText: {
+    textAlign: "center",
+    color: AppTheme.colors.main,
+    marginTop: 10,
+  },
 });

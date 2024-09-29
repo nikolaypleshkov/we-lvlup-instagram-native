@@ -14,7 +14,12 @@ const Router = () => {
         <Stack.Screen
           name="Register"
           component={RegisterScreen}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Login"
+          component={LoginScreen}
+          options={{ headerShown: false }}
         />
       </Stack.Navigator>
     </SafeAreaView>
@@ -26,8 +31,8 @@ export default Router;
 const styles = StyleSheet.create({
   safeAreaContainer: {
     flex: 1,
-    width: '100%',
-    height: '100%',
-    backgroundColor: AppTheme.colors.systemBackground
+    width: "100%",
+    height: "100%",
+    backgroundColor: AppTheme.colors.systemBackground,
   },
 });

@@ -23,7 +23,7 @@ const AdditionalInfo: React.FC<AdditionalInfoProps> = (props) => {
 
   const onProcessDiscard = () => {
     onDiscard();
-  }
+  };
 
   return (
     <View>
@@ -55,13 +55,16 @@ const AdditionalInfo: React.FC<AdditionalInfoProps> = (props) => {
         </View>
       </View>
       <View style={styles.buttonContainer}>
-        <TouchableOpacity style={styles.submitButton} onPress={submitAdditionalInfo}>
+        <TouchableOpacity
+          style={styles.submitButton}
+          onPress={submitAdditionalInfo}
+        >
           <Text style={styles.submitButtonText}>Continue</Text>
         </TouchableOpacity>
       </View>
       <TouchableOpacity onPress={onProcessDiscard}>
-          <Text style={styles.cancelButtonText}>Cancel</Text>
-        </TouchableOpacity>
+        <Text style={styles.cancelButtonText}>Cancel</Text>
+      </TouchableOpacity>
     </View>
   );
 };
