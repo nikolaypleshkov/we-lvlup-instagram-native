@@ -5,27 +5,26 @@
  * @format
  */
 
-import { NavigationContainer } from '@react-navigation/native';
-import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import { NavigationContainer } from "@react-navigation/native";
+import React from "react";
+import type { PropsWithChildren } from "react";
+import { StyleSheet, Text, useColorScheme, View } from "react-native";
 
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
-import Router from './src/routes';
+import { Colors } from "react-native/Libraries/NewAppScreen";
+import Router from "./src/routes";
+import { Provider } from "react-redux";
+import { store } from "./src/app/store";
+import Toast from "./src/components/Toast";
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+  const isDarkMode = useColorScheme() === "dark";
   return (
-    <NavigationContainer>
-      <Router />
-    </NavigationContainer>
+    <Provider store={store}>
+      <NavigationContainer>
+        <Router />
+      </NavigationContainer>
+      <Toast />
+    </Provider>
   );
 }
 
