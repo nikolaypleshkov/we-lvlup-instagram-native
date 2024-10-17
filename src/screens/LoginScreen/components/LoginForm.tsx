@@ -5,8 +5,12 @@ import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { schema } from "./login.schema";
 import Toast from "../../../components/Toast";
-import { useAppDispatch } from "../../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import { showToast } from "../../../features/toast/toastSlice";
+import { login } from "../../../features/auth/authSlice";
+import { userResponseMock } from "../../../utils/mock";
+import { Envelope } from "../../../models/envelope";
+import { User } from "../../../models/user";
 
 const defaultValues = {
   email: "",
@@ -24,20 +28,27 @@ const LoginForm = () => {
   });
 
   const dispatch = useAppDispatch();
+  const state = useAppSelector((selector) => selector.auth);
 
   const triggerToast = (
     type: "success" | "error" | "warning" | "info",
     message: string
   ) => {
-    dispatch(
-      showToast({ type: type, message: message })
-    );
+    dispatch(showToast({ type: type, message: message }));
+  };
+
+  const loginService = (): Promise<Envelope<User>> => {
+    return Promise.resolve(userResponseMock);
   };
 
   const onLoginSubmit = (formData: any): void => {
-    dispatch(
-      showToast({ type: "success", message: "Post uploaded successfully!" })
-    );
+    loginService().then((response) => {
+      dispatch(
+        login({
+          user: response.data,
+        })
+      );
+    });
   };
 
   return (
@@ -83,7 +94,7 @@ const LoginForm = () => {
       <View style={styles.buttonContainer}>
         <TouchableOpacity
           style={styles.submitButton}
-          onPress={() => triggerToast("success", "Login successfully!")}
+          onPress={onLoginSubmit}
           // disabled={Boolean(errors.email?.message || errors.password?.message)}
         >
           <Text style={styles.submitButtonText}>Log in</Text>
