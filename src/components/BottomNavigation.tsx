@@ -5,6 +5,7 @@ import Icon from "react-native-vector-icons/Foundation";
 import FeatherIcon from "react-native-vector-icons/Feather";
 
 import MaterialCommunityIcon from "react-native-vector-icons/MaterialCommunityIcons";
+import ProfileScreen from "../screens/ProfileScreen/ProfileScreen";
 const Tab = createBottomTabNavigator();
 
 const BottomNavigation: React.FC = () => {
@@ -56,7 +57,7 @@ const BottomNavigation: React.FC = () => {
       />
       <Tab.Screen
         name="Profile"
-        component={HomeScreen}
+        component={ProfileScreen}
         options={{ headerShown: false, tabBarShowLabel: false  }}
       />
     </Tab.Navigator>
