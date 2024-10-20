@@ -14,7 +14,7 @@ export const userResponseMock: Envelope<User> = {
     password: "",
     bio: null,
     profileImage:
-      "images/1728205518655_7ED2349C-8B8C-4B18-BA64-0D7426CC250F.jpg",
+      "https://avatars.githubusercontent.com/u/47944944?v=4",
     followers: [],
     following: [],
     posts: [],
