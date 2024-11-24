@@ -116,6 +116,108 @@ export const postsResponseMock: Envelope<Post[]> = {
       shareCount: 85,
       content: "https://images.unsplash.com/photo-1729465848877-3b4a76dc7f74?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       contentType: "img"
+    },
+    {
+      id: "3",
+      user: {
+        id: "user_004",
+        username: "travelbuddy",
+        email: "travelbuddy@example.com",
+        fullname: "Travel Buddy",
+        phone: "987-654-3210",
+        password: "password123", // This is just for mock purposes
+        bio: "Sharing my travel adventures ✈️📸",
+        profileImage: "https://avatars.githubusercontent.com/u/47944944?v=4",
+        followers: [
+          { id: "user_001", username: "johndoe" }
+        ],
+        following: [
+          { id: "user_003", username: "alexsmith" },
+          { id: "user_002", username: "janedoe" }
+        ],
+        posts: ["post_003"],
+        savedPosts: ["post_004", "post_006"],
+        stories: ["story_003"]
+      },
+      description: "Sunset vibes in Bali 🌅 #paradise",
+      posted: Date.now(),
+      likesCount: 780,
+      likes: [
+        { id: "user_001", username: "johndoe", email: "johndoe@example.com", fullname: "John Doe", phone: null, password: "", bio: null, profileImage: "https://avatars.githubusercontent.com/u/47944944?v=4", followers: [], following: [], posts: [], savedPosts: [], stories: [] }
+      ],
+      commentsCount: 3,
+      comments: [
+        { user: { id: "user_001", username: "johndoe" }, text: "This looks unreal!" },
+        { user: { id: "user_003", username: "alexsmith" }, text: "Bucket list location right there!" },
+        { user: { id: "user_002", username: "janedoe" }, text: "I want to go there too!" }
+      ],
+      shareCount: 85,
+      content: "https://images.unsplash.com/photo-1729465848877-3b4a76dc7f74?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      contentType: "img"
+    },
+    {
+      id: "4",
+      user: {
+        id: "user_004",
+        username: "travelbuddy",
+        email: "travelbuddy@example.com",
+        fullname: "Travel Buddy",
+        phone: "987-654-3210",
+        password: "password123", // This is just for mock purposes
+        bio: "Sharing my travel adventures ✈️📸",
+        profileImage: "https://avatars.githubusercontent.com/u/47944944?v=4",
+        followers: [
+          { id: "user_001", username: "johndoe" }
+        ],
+        following: [
+          { id: "user_003", username: "alexsmith" },
+          { id: "user_002", username: "janedoe" }
+        ],
+        posts: ["post_003"],
+        savedPosts: ["post_004", "post_006"],
+        stories: ["story_003"]
+      },
+      description: "Sunset vibes in Bali 🌅 #paradise",
+      posted: Date.now(),
+      likesCount: 780,
+      likes: [
+        { id: "user_001", username: "johndoe", email: "johndoe@example.com", fullname: "John Doe", phone: null, password: "", bio: null, profileImage: "https://avatars.githubusercontent.com/u/47944944?v=4", followers: [], following: [], posts: [], savedPosts: [], stories: [] }
+      ],
+      commentsCount: 3,
+      comments: [
+        { user: { id: "user_001", username: "johndoe" }, text: "This looks unreal!" },
+        { user: { id: "user_003", username: "alexsmith" }, text: "Bucket list location right there!" },
+        { user: { id: "user_002", username: "janedoe" }, text: "I want to go there too!" }
+      ],
+      shareCount: 85,
+      content: "https://images.unsplash.com/photo-1729465848877-3b4a76dc7f74?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      contentType: "img"
     }
   ]
 };
+
+
+export const mockPosts = [
+  { id: 1, type: 'image', uri: 'https://via.placeholder.com/300', size: 'medium' },
+  { id: 2, type: 'image', uri: 'https://via.placeholder.com/300', size: 'medium' },
+  { id: 3, type: 'image', uri: 'https://via.placeholder.com/300', size: 'medium' },
+  { id: 4, type: 'image', uri: 'https://via.placeholder.com/300', size: 'medium' },
+  { id: 5, type: 'video', uri: 'https://via.placeholder.com/300', size: 'medium' },
+  { id: 6, type: 'image', uri: 'https://via.placeholder.com/300', size: 'medium' },
+  { id: 7, type: 'image', uri: 'https://via.placeholder.com/300', size: 'medium' },
+  { id: 8, type: 'image', uri: 'https://via.placeholder.com/300', size: 'medium' },
+  { id: 9, type: 'image', uri: 'https://via.placeholder.com/300', size: 'medium' },
+  { id: 10, type: 'video', uri: 'https://via.placeholder.com/300', size: 'small' },
+  { id: 11, type: 'image', uri: 'https://via.placeholder.com/300', size: 'large' },
+  { id: 12, type: 'image', uri: 'https://via.placeholder.com/300', size: 'medium' },
+  { id: 13, type: 'image', uri: 'https://via.placeholder.com/300', size: 'large' },
+  { id: 14, type: 'image', uri: 'https://via.placeholder.com/300', size: 'small' },
+  { id: 15, type: 'video', uri: 'https://via.placeholder.com/300', size: 'medium' },
+  { id: 16, type: 'image', uri: 'https://via.placeholder.com/300', size: 'large' },
+  { id: 17, type: 'image', uri: 'https://via.placeholder.com/300', size: 'small' },
+  { id: 18, type: 'image', uri: 'https://via.placeholder.com/300', size: 'medium' },
+  { id: 19, type: 'image', uri: 'https://via.placeholder.com/300', size: 'large' },
+  { id: 20, type: 'video', uri: 'https://via.placeholder.com/300', size: 'small' },
+  { id: 21, type: 'image', uri: 'https://via.placeholder.com/300', size: 'medium' },
+  { id: 22, type: 'image', uri: 'https://via.placeholder.com/300', size: 'medium' },
+];
