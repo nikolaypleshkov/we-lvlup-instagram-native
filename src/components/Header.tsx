@@ -5,7 +5,7 @@ import FeatherIcon from "react-native-vector-icons/Feather";
 
 const Header: React.FC = () => {
   const [dropdownVisible, setDropdownVisible] = React.useState(false);
-
+  
   const toggleDropdown = () => {
     setDropdownVisible(!dropdownVisible);
   };
@@ -58,12 +58,14 @@ export default Header;
 
 const styles = StyleSheet.create({
   header: {
-    padding: 15,
+    paddingHorizontal: 15,
+    paddingVertical: 5,
     backgroundColor: "#fff",
     borderBottomWidth: 1,
-    borderBottomColor: "#ddd",
+    borderBottomColor: "#fff",
     position: "relative",
     flexDirection: "row",
+    alignItems: 'flex-end',
     gap: 22,
   },
   gap: {
@@ -75,7 +77,7 @@ const styles = StyleSheet.create({
     gap: 5,
   },
   dropdownButtonText: {
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: "bold",
   },
   dropdownMenu: {

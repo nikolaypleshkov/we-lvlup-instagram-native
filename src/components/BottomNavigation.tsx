@@ -6,6 +6,7 @@ import FeatherIcon from "react-native-vector-icons/Feather";
 
 import MaterialCommunityIcon from "react-native-vector-icons/MaterialCommunityIcons";
 import ProfileScreen from "../screens/ProfileScreen/ProfileScreen";
+import SearchScreen from "../screens/SearchScreen";
 const Tab = createBottomTabNavigator();
 
 const BottomNavigation: React.FC = () => {
@@ -47,7 +48,7 @@ const BottomNavigation: React.FC = () => {
       />
       <Tab.Screen
         name="Search"
-        component={HomeScreen}
+        component={SearchScreen}
         options={{ headerShown: false, tabBarShowLabel: false  }}
       />
       <Tab.Screen

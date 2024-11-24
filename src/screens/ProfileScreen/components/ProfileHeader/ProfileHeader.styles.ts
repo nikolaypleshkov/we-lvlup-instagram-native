@@ -4,8 +4,6 @@ export const styles = StyleSheet.create({
   header: {
     padding: 15,
     backgroundColor: "#fff",
-    borderBottomWidth: 1,
-    borderBottomColor: "#ddd",
     position: "relative",
     flexDirection: "row",
     gap: 22,

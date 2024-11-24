@@ -9,25 +9,21 @@ const ProfileDetails = () => {
     <View style={styles.container}>
       <View style={styles.headerContainer}>
         <Image source={{ uri: userSelector?.profileImage }} style={styles.profileImage} />
-
         <View style={styles.statsContainer}>
           <View style={styles.stat}>
             <Text style={styles.statNumber}>{userSelector?.posts.length}</Text>
             <Text style={styles.statLabel}>Posts</Text>
           </View>
-
           <View style={styles.stat}>
             <Text style={styles.statNumber}>{userSelector?.followers.length}</Text>
             <Text style={styles.statLabel}>Followers</Text>
           </View>
-
           <View style={styles.stat}>
             <Text style={styles.statNumber}>{userSelector?.following.length}</Text>
             <Text style={styles.statLabel}>Following</Text>
           </View>
         </View>
       </View>
-
       <Text style={styles.fullName}>{userSelector?.fullname}</Text>
     </View>
   );

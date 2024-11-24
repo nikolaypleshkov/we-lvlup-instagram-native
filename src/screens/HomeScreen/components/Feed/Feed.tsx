@@ -31,11 +31,10 @@ const Feed = () => {
 
   return (
     <View style={styles.fullHeightContainer}>
-      <ScrollView style={styles.container}>
+      {/* <ScrollView style={styles.container}> */}
         {posts.map((post) => (
           <FeedCard key={post.id} post={post} />
         ))}
-      </ScrollView>
     </View>
   );
 };

@@ -6,12 +6,16 @@ import IoniconsIcon from "react-native-vector-icons/Ionicons";
 
 import { styles } from "./ProfileHeader.styles";
 import { useAppSelector } from "../../../../app/hooks";
+import DraggableBottomPanel from "../../../../components/DraggableBottomPanel";
 
 const ProfileHeader = () => {
   const userSelected = useAppSelector((selector) => selector.auth);
+  const [isPanelVisible, setPanelVisible] = React.useState(false);
 
-  const toggleDropdown = () => {};
-
+  const toggleDropdown = () => {
+    setPanelVisible((prevState) => !prevState);
+  };
+  
   return (
     <View style={styles.header}>
       <View>
@@ -33,6 +37,11 @@ const ProfileHeader = () => {
       <TouchableOpacity style={styles.dropdownButton}>
         <FeatherIcon name="menu" size={22} color="#000" />
       </TouchableOpacity>
+      {isPanelVisible && (
+        <DraggableBottomPanel>
+          <Text>Your Panel Content Here</Text>
+        </DraggableBottomPanel>
+      )}
     </View>
   );
 };
